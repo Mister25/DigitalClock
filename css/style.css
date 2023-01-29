@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'poppins' sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    background: #2f363e;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    display: flex;
+    gap: 50px;
+    color: #fff;
+}
+.container .circle span{
+    position: absolute;
+    font-size: 0.45em;
+    transform: translateX(-50%) translateY(-10%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.container .circle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+.container .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #191919;
+    stroke-width: 4;
+    transform: translate(5px,5px);
+}
+.container .circle svg circle:nth-child(2)
+{
+    stroke: var(--var);
+    stroke-dasharray:440 ;
+}
+.container .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+.container .ap{
+    position: relative;
+    font-size: 1.5em;
+    transform: translateX(-10px);
+}
+.dots{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+.dots::before{
+    content: "";
+    top: -3px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: var(--var);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--var), 0 0 60px var(--var);
+}
